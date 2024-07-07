@@ -16,10 +16,9 @@ type UseEffectReducer<S, A> = [
 
 export function useEffectReducer<S, A>(reducer: (state: S, action: A) => S, initialState: S): UseEffectReducer<S, A> {
   const [state, setState] = useState<S>(initialState);
-  const dispatch = useCallback((action: A) => {
-    const s = reducer(state, action);
-    setState(s);
-  }, [state, reducer]);
+  const dispatch = (action: A) => {
+    setState(reducer(state, action));
+  };
   return [state, dispatch];
 }
 
