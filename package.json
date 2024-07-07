@@ -1,5 +1,12 @@
 {
   "dependencies": {
     "react": "^18.2.0"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@testing-library/react": "^16.0.0",
+    "@types/react": "^18.3.3",
+    "happy-dom": "^14.12.3",
+    "vitest": "^1.6.0"
   }
 }

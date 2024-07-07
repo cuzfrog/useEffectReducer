@@ -22,10 +22,24 @@ export function useEffectReducer<S, A>(reducer: (state: S, action: A) => S, init
   }, [state, reducer]);
   return [state, dispatch];
 }
+
+function myReducer(...) {
+  // perform effects as needed
+}
+```
+
+Of course, can have different signatures of reducer:
+```typescript
+function myReducer(state: S, action: A, doSomething: () => void): S {
+  //...
+  doSomething();
+  //...
+}
 ```
 
 ## More Implemetations:
 * [useEffectReducer](./useEffectReducer.ts)
+* [useEffectReducer(stable-dispatch)](./useEffectReducer.stable-dispatch.ts)
 * [useAsyncEffectReducer](./useAsyncEffectReducer.ts)
 
 ## License
