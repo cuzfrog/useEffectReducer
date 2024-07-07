@@ -35,6 +35,9 @@ function myReducer(state: S, action: A, doSomething: () => void): S {
   //...
 }
 ```
+## Caveats
+* `dispatch` should be called from events, not effects.
+* Errors properly handled so they don't fail the reducer.
 
 ## More Implemetations:
 * [useEffectReducer](./useEffectReducer.ts)
